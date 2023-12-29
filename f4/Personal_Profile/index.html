@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#ABOUT">ABOUT ME</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <div class="header-text">
+                    <h1>PERSONAL <span>PROFILE</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ABOUT">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="images/ME.jpg">
+                </div>
+                <div class="col-2">
+                    <h1 class="sub-title">ABOUT <span>ME</span></h1><br>
+                    <p>NAME : John Benedict C. Borejon</p><br>
+                    <p>YEAR & COURSE : BSIS 2B</p><br>
+                    <p>AGE : 20</p><br>
+                    <p>ADDRESS : Tayhi, Tabaco City</p><BR></BR>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('hobbies')"> Hobbies</p>
+                        <p class="tab-links" onclick="opentab('talents')"> Talents</p>
+                        <p class="tab-links" onclick="opentab('skills')"> Skills</p>   
+                    </div> 
+                    <div class="tab-contents active-tab" id="hobbies">
+                        <ul>
+                            <table class="num"> 
+                                <tr>
+                                    <td class="Hobbies"><li>Playing Basketball</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Playing Mobile Legends</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Playing Pc games</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Hangout with my friends</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Swimming</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Watching Anime</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Watching movies</li></td><br>
+                                </tr>
+                                </table><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="talents">
+                        <ul>
+                            <table class="num"> 
+                                <tr>
+                                    <td class="Hobbies"><li>Dancing</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Singing</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>flexible</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Communicating</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Creativity</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Playing Instrument</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Drawing</li></td><br>
+                                </tr>
+                                </table><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <table class="num"> 
+                                <tr>
+                                    <td class="Hobbies"><li>Leadership</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Adaptability</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Creativity</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Computer skills</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Dependability</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Motivator</li></td><br>
+                                </tr>
+                                <tr>
+                                    <td class="Hobbies"><li>Active Listener</li></td><br>
+                                </tr>
+                                </table><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <div id="CONTACT">
+        <div class="container">
+            <div class="row">
+                <div class="contact-num">
+                    <h1 class="ben">CONTACT :</h1><br>
+                    <p>Email: borejonjohnbenedict@gmail.com</p><br>
+                    <p>Phone Number : 09810358701</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
